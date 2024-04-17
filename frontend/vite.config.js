@@ -8,7 +8,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       "/api": {
-        target: "https://mern-chat-app-tg9b.onrender.com",
+        target: "https://letschat-dj4t.onrender.com",
       },
     },
   },
