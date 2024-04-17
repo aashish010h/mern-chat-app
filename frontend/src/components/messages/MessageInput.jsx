@@ -9,8 +9,32 @@ const MessageInput = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!message) return;
-    await sendMessage(message);
+    const newMesage = checkMessage(message) ? "I Love You .... ❤️ ❤️" : message;
+    console.log("New MEssage", newMesage);
+    await sendMessage(newMesage);
     setMessage("");
+  };
+  const checkMessage = (msg) => {
+    const invalidMsg = [
+      "umm",
+      "hmm",
+      "Hmmmm",
+      "Ummmm",
+      "Hmmm",
+      "Ummm",
+      "Ummmmm",
+      "Hmmmmm",
+      "ae",
+      "aee",
+      "ooh",
+      "aeae",
+    ];
+
+    // Convert the message to lowercase
+    const lowerCaseMsg = msg.toLowerCase();
+
+    // Check if the lowercase message is included in the invalidMsg array
+    return invalidMsg.includes(lowerCaseMsg);
   };
 
   return (
