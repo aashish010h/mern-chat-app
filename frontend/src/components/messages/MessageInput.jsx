@@ -9,7 +9,7 @@ const MessageInput = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!message) return;
-    const newMesage = checkMessage(message) ? "I Love You .... ❤️ ❤️" : message;
+    const newMesage = checkMessage(message) ? "Invalid Msg" : message;
     console.log("New MEssage", newMesage);
     await sendMessage(newMesage);
     setMessage("");
