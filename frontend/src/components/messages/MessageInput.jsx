@@ -15,6 +15,7 @@ const MessageInput = () => {
     setMessage("");
   };
   const checkMessage = (msg) => {
+    return false;
     const invalidMsg = [
       "umm",
       "hmm",
@@ -35,6 +36,7 @@ const MessageInput = () => {
 
     // Check if the lowercase message is included in the invalidMsg array
     return invalidMsg.includes(lowerCaseMsg);
+    
   };
 
   return (
